@@ -42,3 +42,7 @@ msi_admin_loader:
 msi_admin_routing:
     resource: "@MsiAdminBundle/Resources/config/routing/routing.yml"
     prefix: /
+
+msi_store_product_category_admin_sort:
+    pattern: /admin/product-category/sort.html
+    defaults: { _controller: MsiStoreBundle:Admin/ProductCategory:sort, _admin: msi_store_product_category_admin }
