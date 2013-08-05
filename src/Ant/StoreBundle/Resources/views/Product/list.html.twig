@@ -1,0 +1,40 @@
+{% extends 'AntCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<h2>{{ category ?: 'arthropods'|trans }}</h2>
+{% if category %}
+{{ category.translation.content|raw }}
+{% endif %}
+{% for product in products %}
+    {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}
+        <div class="col-lg-6">
+            <div class="dada">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dada-header">
+                        <a href="#">
+                            <img src="{{ product.pathname('image') }}" alt="0">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="dada-body">
+                            <h5><a href="#">{{ product.translations.0.name }}</a></h5>
+                            {{ product.price }} $
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% if loop.index == products|length or loop.index % 2 == 0 %}</div>{% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+{{ render(controller('MsiStoreBundle:ProductCategory:nav', {'_locale': app.request.locale})) }}
+{% endblock %}
+
+{% block breadcrumb %}
+<li><a href="{{ path('msi_store_product_list') }}">{{ 'arthropods'|trans }}</a></li>
+{% include 'AntStoreBundle:Product:list_breadcrumb.html.twig' with {category: category} %}
+{% endblock %}

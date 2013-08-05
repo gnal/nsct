@@ -1,0 +1,6 @@
+{% if category and category.parent and category.parent.lvl != 0 %}
+{% include 'AntStoreBundle:Product:list_breadcrumb.html.twig' with {category: category.parent} %}
+{% endif %}
+{% if category %}
+<li><a href="{{ path('msi_store_product_list', {'category': category.id}) }}">{{ category }}</a></li>
+{% endif %}

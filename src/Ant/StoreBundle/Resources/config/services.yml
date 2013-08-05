@@ -1,0 +1,7 @@
+parameters:
+#    ant_store.example.class: Ant\StoreBundle\Example
+
+services:
+#    ant_store.example:
+#        class: %ant_store.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

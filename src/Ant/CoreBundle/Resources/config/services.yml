@@ -1,0 +1,7 @@
+parameters:
+#    ant_core.example.class: Ant\CoreBundle\Example
+
+services:
+#    ant_core.example:
+#        class: %ant_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

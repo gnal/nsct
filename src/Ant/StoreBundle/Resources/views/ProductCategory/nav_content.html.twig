@@ -1,0 +1,10 @@
+<ul style="list-style: none;{% if padding == false %}padding-left: 0;{% endif %}">
+    {% for category in categories %}
+        <li><a href="{{ path('msi_store_product_list', {category: category.id}) }}">{{ category.translation.name }}</a> ({{ category.countProductsRecursively() }})</li>
+        {% if category.children|length %}
+        <li>
+            {% include 'MsiStoreBundle:ProductCategory:nav_content.html.twig' with {padding: true, categories: category.children} %}
+        </li>
+        {% endif %}
+    {% endfor %}
+</ul>

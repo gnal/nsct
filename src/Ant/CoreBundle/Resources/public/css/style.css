@@ -1,0 +1,151 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Croissant One', cursive;*/
+    background: #3E5363;
+    color: #B8CEE0;
+}
+
+/* header */
+
+.header {
+    background: #3E5363;
+
+}
+
+.header-inner {
+    padding: 30px 0 30px;
+    position: relative;
+}
+
+.header a {
+    color: #E0EAF4;
+}
+
+.header a:hover {
+    color: #E0EAF4;
+}
+
+#logo {
+    font-family: 'Croissant One', cursive;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px #000;
+}
+
+#logo a {
+    color: #B8CEE0;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    color: #B8CEE0;
+    text-decoration: none;
+}
+
+#slogan {
+    position: absolute;
+    left: 133px;
+    bottom: -10px;
+    color: #B8CEE0;
+    border-top: 1px dotted #B8CEE0;
+}
+
+/* content */
+
+.content {
+    background: #3E5363;
+    padding: 0 0 15px;
+}
+
+.content a {
+    color: #55D43F;
+}
+
+.content a:hover {
+    color: #67FF4D;
+}
+
+/* footer */
+
+.footer {
+    background: #3E5363;
+    padding: 15px;
+}
+
+.navbar {
+    background: #000;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-nav>li>a {
+    color: #55D43F;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
+    color: #67FF4D;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+.breadcrumb {
+    background: none;
+    margin: 7px 0;
+    font-size: 85%;
+}
+
+/*.legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}*/
+
+.dada-header {
+    padding: 15px 15px 0;
+    background: #6A7483;
+}
+
+.dada-body {
+    padding: 15px 15px 15px;
+    background: #000;
+    /*color: #999;*/
+}
+
+.dada {
+    margin: 10px 0;
+    border: 1px dotted #000;
+}
+
+.dada-header a {
+    display: block;
+    border: dotted #000;
+    border-width: 1px 1px 0;
+}
+
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+.dada h5 {
+    margin-top: 0;
+}

@@ -1,0 +1,71 @@
+{% extends 'MsiAdminBundle:Page:layout.html.twig' %}
+
+{% block css %}
+<link href="/bundles/antcore/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="{{ asset('bundles/antcore/css/style.css') }}">
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 id="logo"><a href="{{ path('homepage') }}"><i style="color: #55D43F;" class="icon-bug icon-large"></i> insectal</a></h1>
+                    <small id="slogan">arthropodes vivants</small>
+                </div>
+                <div class="col-lg-6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="{{ path('homepage') }}">Home</a></li>
+            <li><a href="{{ path('msi_store_product_list') }}">{{ 'arthropods'|trans }}</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <ul class="breadcrumb">
+            {#<li><a href="{{ path('homepage') }}">{{ block('brand') }}</a></li>#}
+            {{ block('breadcrumb') }}
+        </ul>
+        <div class="row">
+
+            <div class="col-lg-9">
+                {{ msi_block_render('content_top', page) }}
+                {{ block('page_content') }}
+                {{ msi_block_render('content_bottom', page) }}
+            </div>
+            <div class="col-lg-3">
+                {{ block('sidebar') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="/bundles/antcore/vendor/hinclude/hinclude.js"></script>
+{{ parent() }}
+{% endblock %}
