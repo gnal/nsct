@@ -1,4 +1,4 @@
-<h4>{{ 'arthropods'|trans }}</h3>
+<h4>{{ 'arthropods'|trans }}</h4>
 {% for category in categories %}
     {% include 'MsiStoreBundle:ProductCategory:nav_content.html.twig' with {padding: false, categories: category.children} %}
 {% endfor %}

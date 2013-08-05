@@ -3,7 +3,9 @@
 {% block content %}
 <h2>{{ category ?: 'arthropods'|trans }}</h2>
 {% if category %}
-{{ category.translation.content|raw }}
+{{ category.translation.content }}
+{% else %}
+<p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. Pellentesque ut massa vitae tortor consequat adipiscing.</p>
 {% endif %}
 {% for product in products %}
     {% if loop.index == 1 or loop.index % 2 == 1 %}<div class="row">{% endif %}

@@ -12,12 +12,12 @@
 {% endblock %}
 
 {% block body %}
-<div class="header">
-    <div class="container">
+<div class="container">
+    <div class="header">
         <div class="header-inner">
             <div class="row">
                 <div class="col-lg-6">
-                    <h1 id="logo"><a href="{{ path('homepage') }}"><i style="color: #55D43F;" class="icon-bug icon-large"></i> insectal</a></h1>
+                    <h1 id="logo"><a href="{{ path('homepage') }}"><i class="icon-bug icon-large"></i> insectal</a></h1>
                     <small id="slogan">arthropodes vivants</small>
                 </div>
                 <div class="col-lg-6">
@@ -25,19 +25,15 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="navbar">
-    <div class="container">
+    <div class="navbar">
         <ul class="nav navbar-nav">
             <li><a href="{{ path('homepage') }}">Home</a></li>
             <li><a href="{{ path('msi_store_product_list') }}">{{ 'arthropods'|trans }}</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
-</div>
 
-<div class="container">
     <div class="content">
         <ul class="breadcrumb">
             {#<li><a href="{{ path('homepage') }}">{{ block('brand') }}</a></li>#}
