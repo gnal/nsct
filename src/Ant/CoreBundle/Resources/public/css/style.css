@@ -21,7 +21,10 @@ body {
 }
 
 #logo {
-    font-family: 'Croissant One', cursive;
+    /*font-family: 'Croissant One', cursive;*/
+/*    font-family: 'Megrim', cursive;
+    font-family: 'Eater', cursive;*/
+font-family: 'Aclonica', sans-serif;
     margin: 0;
     font-weight: bold;
     text-shadow: 2px 2px 1px #000;

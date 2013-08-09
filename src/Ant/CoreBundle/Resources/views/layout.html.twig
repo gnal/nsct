@@ -6,6 +6,9 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
 <link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Eater|Wallpoet|Aclonica|Julius+Sans+One' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="{{ asset('bundles/antcore/css/style.css') }}">
 {{ parent() }}
@@ -31,7 +34,7 @@
         <ul class="nav navbar-nav">
             <li><a href="{{ path('homepage') }}">Home</a></li>
             <li><a href="{{ path('msi_store_product_list') }}">{{ 'arthropods'|trans }}</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ path('contact') }}">Contact</a></li>
         </ul>
     </div>
 
@@ -42,6 +45,7 @@
         </ul>
         <div class="row">
             <div class="col-lg-9">
+                <h2>{{ block('title') }}</h2>
                 {{ msi_block_render('content_top', page) }}
                 {{ block('page_content') }}
                 {{ msi_block_render('content_bottom', page) }}

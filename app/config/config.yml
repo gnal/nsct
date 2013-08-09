@@ -57,6 +57,9 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
+        mappings:
+            # MsiUserBundle:
+                # dir: [bundle-mappings1/, bundle-mappings2/]
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -89,3 +92,6 @@ msi_admin:
         footer: pied de page
     block_actions:
         'AcmeAppBundle:SomeController:someAction': 'someAction'
+
+msi_store:
+    product_class: Ant\StoreBundle\Entity\Product
