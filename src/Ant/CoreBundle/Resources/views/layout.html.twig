@@ -24,7 +24,16 @@
                     <small id="slogan"{% if app.request.locale == 'en' %}style="left: 160px;"{% endif %}>{{ 'slogan'|trans }}</small>
                 </div>
                 <div class="col-lg-6">
+                    <ul class="list-unstyled">
+                        {% if is_granted('ROLE_USER') %}
+                            <li><a href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>
+                            <li><a title="{{ 'Log out'|trans }}" href="{{ path('fos_user_security_logout') }}"><i class="icon-signout icon-large"></i></a></li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                        {% endif %}
+                    </ul>
                     <p class="pull-right"><a href="{{ path('homepage', {_locale: app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a></p>
+                    <p>cart: {{ cart.items.count }}</p>
                 </div>
             </div>
         </div>
